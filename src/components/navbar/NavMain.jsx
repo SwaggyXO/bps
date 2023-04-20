@@ -4,25 +4,22 @@ import "./NavMain.css";
 const NavMain = () => {
   return (
     <div className='nav-parent'>
-        <div className='nav-logo'>
-            <img className='logo-img' src="bps_logo.png" alt=""/>
-        </div>
         <div className='nav-items'>
+            <div className='nav-logo'>
+                <img className='logo-img' src="logo_main.png" alt=""/>
+            </div>
             <ul>
                 <li>
                     <a href=""> Home </a>
                 </li>
                 <li>
-                    <a href=""> About Us </a>
+                    <a href="#about-section"> About Us </a>
                 </li>
                 <li>
                     <a href=""> Our Products </a>
                 </li>
                 <li>
-                    <a href=""> Brochure </a>
-                </li>
-                <li>
-                    <a href=""> Contact Us </a>
+                    <a href="#footer-main"> Contact Us </a>
                 </li>
             </ul>
         </div>
