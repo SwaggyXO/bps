@@ -1,22 +1,23 @@
 import React from 'react'
 import "./NavMain.css";
+import Logo from '/logo_main.png'
 
 const NavMain = () => {
   return (
     <div className='nav-parent'>
         <div className='nav-items'>
             <div className='nav-logo'>
-                <img className='logo-img' src="logo_main.png" alt=""/>
+                <img className='logo-img' src={Logo} alt="logo"/>
             </div>
             <ul>
                 <li>
-                    <a href=""> Home </a>
+                    <a href="/"> Home </a>
                 </li>
                 <li>
-                    <a href="#about-section"> About Us </a>
+                    <a href="/#about-section"> About Us </a>
                 </li>
                 <li>
-                    <a href=""> Our Products </a>
+                    <a href="/#products-page"> Our Products </a>
                 </li>
                 <li>
                     <a href="#footer-main"> Contact Us </a>

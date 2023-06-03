@@ -1,6 +1,7 @@
 import { Container, Row, Col, Image, FormControl } from "react-bootstrap";
 import './Products.css';
 import { BsArrowDown } from 'react-icons/bs';
+import ProductsPage from "./ProductsPage";
 
 const Products = () => {
   return (
@@ -44,29 +45,12 @@ const Products = () => {
             </Row>
         </Container>
 
-        <Container id="products-page-1" fluid>
-            <Row>
-                <Col className="col-lg-12" id="products-page-1-left-content">
-                    <div className="products-page-1-left-title">
-                        <h1>Workstations</h1>
-                    </div>
+        <Container id="products-page" style={{backgroundColor: '#D9D9D9'}} fluid>
+            <ProductsPage headingA="Workstations" imgA="workstations.png" headingB="Process Automation/Special Purpose Machine" imgB="proc_auto.png" />
+        </Container>
 
-                    <div className="products-page-1-left-img">
-                        <img src="workstations.png" alt="" width="400px" />
-                    </div>
-                </Col>
-            </Row>
-            <Row>
-                <Col className="col-lg-12" id="products-page-1-right-content">
-                    <div className="products-page-1-right-img">
-                        <img src="proc_auto.png" alt="" width="400px" />
-                    </div>
-
-                    <div className="products-page-1-right-title">
-                        <h1>Process Automation/Special Purpose Machine</h1>
-                    </div>
-                </Col>
-            </Row>
+        <Container id="products-page" style={{backgroundColor: '#BABABA'}} fluid>
+            <ProductsPage headingA="Assembly Jigs, Fixtures and Testing Equipment" imgA="assem_jigs_t_equip.png" headingB="Material Storage and Handling Equipment" imgB="handling_equip.png" />
         </Container>
     </>
   )
