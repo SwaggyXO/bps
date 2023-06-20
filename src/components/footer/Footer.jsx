@@ -38,7 +38,7 @@ const Footer = () => {
         <Container fluid id="footer-main">
             <Row>
                 <Col className="col-lg-6">
-                    <Fade bottom cascade>
+                    {/* <Fade bottom cascade> */}
                         <div className="footer-left-content">
 
                             <div className="footer-left-intro">
@@ -78,11 +78,11 @@ const Footer = () => {
 
                             </div>
                         </div>
-                    </Fade>
+                    {/* </Fade> */}
                 </Col>
 
                 <Col className="col-lg-6">
-                    <Fade bottom cascade>
+                    {/* <Fade bottom cascade> */}
                         <div className='footer-right-content'>
                             <div className='form-heading'>
                                 <h2> Inquire </h2>
@@ -117,7 +117,7 @@ const Footer = () => {
                                 </form>
                             </div>
                         </div>
-                    </Fade>
+                    {/* </Fade> */}
                 </Col>
             </Row>
         </Container>
