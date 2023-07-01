@@ -11,7 +11,7 @@ import Products from "../products/Products";
 
 const BodyMain = () => {
   return (
-    <div>
+    <>
       <Container id="intro" fluid>
         <NavMain />
         <Container fluid id="intro-section">
@@ -125,7 +125,7 @@ const BodyMain = () => {
       <Products />
 
       <Footer />
-    </div>
+    </>
   );
 };
 

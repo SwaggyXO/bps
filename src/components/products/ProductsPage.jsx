@@ -13,35 +13,43 @@ const ProductsPage = ({headingA, imgA, headingB, imgB}) => {
     return (
         <>
             <Row>
-                <Col className="col-lg-12" id="products-page-top-content">
+                <Col className="col-lg-6" id="products-page-top-content">
 
                     <Fade left>
                         <div className="products-page-top-title">
                             <h1> <Link to={`/products/${strA[0]}`} target="_top" style={{textDecoration: 'none', color: '#000000'}} className='toolTip'> {headingA} </Link> </h1>
                         </div>
                     </Fade>
+                </Col>
+
+                <Col className="col-lg-6" id="products-page-top-content">
 
                     <Fade right>
                         <div className="products-page-top-img">
-                            <img src={imgA} alt="" width="600px" />
+                            <img src={imgA} alt="" />
                         </div>
                     </Fade>
                 </Col>
             </Row>
             <Row>
-                <Col className="col-lg-12" id="products-page-bottom-content">
+                <Col className="col-lg-6" id="products-page-bottom-content">
 
                     <Fade left>
                         <div className="products-page-bottom-img">
-                            <img src={imgB} alt="" width="600px" />
+                            <img src={imgB} alt="" />
                         </div>
                     </Fade>
+
+                </Col>
+
+                <Col className="col-lg-6" id="products-page-bottom-content">
 
                     <Fade right>
                         <div className="products-page-bottom-title">
                             <h1> <Link to={`/products/${strB[0]}`} target="_top" style={{textDecoration: 'none', color: '#000000'}} className='toolTip'> {headingB} </Link> </h1>
                         </div>
                     </Fade>
+
                 </Col>
             </Row>
 
