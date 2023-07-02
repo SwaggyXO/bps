@@ -8,7 +8,6 @@ const NavMain = (props) => {
     const sidebarRef = useRef(null);
 
     useEffect(() => {
-        
         if (sidebar) sidebarRef.current.style.height = `${props.sidebarHeight}px`;
 
     }, [sidebar]);
