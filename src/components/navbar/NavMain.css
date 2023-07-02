@@ -3,18 +3,15 @@
     justify-content: space-around;
     height: 12vh;
     background-color: #6D79EB;
-    /* border-bottom-left-radius: 1vh; */
-    /* border-bottom-right-radius: 1vh; */
-    /* box-shadow: 0px 15px 20px -10px #111; */
 }
-
-/* .nav-logo{
-    padding: 2vh 2vh;
-} */
 
 .logo-img{
     height: 100px;
     width: 200px;
+}
+
+.sidebar-icon {
+    display: none;
 }
 
 .nav-items {
@@ -65,3 +62,113 @@
 .nav-items ul a span{
     margin-left: 1.5vh;
 }
+
+@media (max-width: 1012px) {
+    .nav-items {
+        display: flex;
+        width: 100%;
+        padding: 2vh 4vh;
+        justify-content: space-between;
+    }
+
+    .nav-items ul a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 863px) {
+    .nav-items {
+        display: flex;
+        width: 100%;
+        padding: 2vh 2vh;
+        justify-content: space-between;
+    }
+
+    .nav-items ul a {
+        font-size: 1.2rem;
+    }
+
+    .logo-img{
+        height: 80px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 770px) {
+    .nav-items {
+        display: flex;
+        width: 100%;
+        padding: 2vh 1vh;
+        justify-content: space-between;
+    }
+
+    .nav-items ul a {
+        font-size: 1.2rem;
+    }
+
+    .logo-img{
+        height: 80px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 745px) {
+    .logo-img.hidden{
+        display: none;
+    }
+
+    .sidebar-content-active {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo-img.active{
+        padding-top: 1vh;
+    }
+
+    .sidebar-icon {
+        margin: auto 0;
+        font-size: 2rem;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-items ul a::before {
+        background-color: #000000;
+    }
+  
+    .ul-elements {
+        color: black;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #fef7e5;
+        width: 0px;
+        height: 100%;
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+    }
+  
+    .ul-elements.active {
+        width: 270px;
+    }
+  
+    .ul-elements ul {
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .ul-elements.active ul li{
+        margin-right: unset;
+        margin-top: 22px;
+    }
+
+    .ul-elements.active ul li a{
+        color: black;
+    }
+
+    .sidebar-icon.active {
+        padding: 2vh 0 0 2vh;
+    }
+  }
