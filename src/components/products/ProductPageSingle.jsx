@@ -21,7 +21,7 @@ const ProductPageSingle = () => {
                     <Container fluid id='product-single-page'>
                         <Row id='product-single-page-content'>
                             <Col className="col-lg-6" id='product-single-page-left-content'>
-                                <div id='product-single-page-heading-div'>
+                                <div id={`product-single-page-heading-div${arr.length > 1 ? '-large' : ''}`}>
                                     {arr.length > 2 ?
                                         <>
                                             <h1>
@@ -49,7 +49,7 @@ const ProductPageSingle = () => {
                             </Col>
 
                             <Col className="col-lg-6" id='product-single-page-right-content'>
-                                <img src={ele.img} alt={ele.heading.toLowerCase()} id='product-single-page-img' width="600px" />   
+                                <img src={ele.img} alt={ele.heading.toLowerCase()} id='product-single-page-img'/>   
                             </Col>
                         </Row>
                     </Container>
