@@ -49,7 +49,7 @@ const BodyMain = () => {
 
                 <div className="intro-buttons">
                   <div className="intro-btn">
-                    <button className="primary-btn btn" id="intro-btn-1">View Our Products</button>
+                    <button className="primary-btn btn" id="intro-btn-1"> <a href="#products-intro"> View Our Products </a> </button>
                   </div>
 
                   <div className="intro-btn">
