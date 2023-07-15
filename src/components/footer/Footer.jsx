@@ -1,13 +1,10 @@
 import './Footer.css';
 import { Container, Row, Col, Image, FormControl } from "react-bootstrap";
 import { BsTelephone, BsWhatsapp } from 'react-icons/bs';
-// import { IoLogoWhatsapp } from 'react-icons/io';
 import { TfiEmail } from 'react-icons/tfi';
 import { UserOutlined, MailOutlined, MobileOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
-import { useState } from 'react';
 const { TextArea } = Input;
-import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
 
@@ -29,20 +26,12 @@ const Footer = () => {
         window.location.href = mailToLink;
     }
 
-    const handleChange = (e) => {
-        // const {name, value} = e.target;
-
-        // setFormData((prevFormData) => ({
-        //     ...prevFormData,
-        //     [name]: value,
-        // }))
-    }
+    const handleChange = (e) => {}
 
     return (
         <Container fluid id="footer-main">
             <Row>
                 <Col className="col-lg-6">
-                    {/* <Fade bottom cascade> */}
                         <div className="footer-left-content">
 
                             <div className="footer-left-intro">
@@ -82,11 +71,9 @@ const Footer = () => {
 
                             </div>
                         </div>
-                    {/* </Fade> */}
                 </Col>
 
                 <Col className="col-lg-6">
-                    {/* <Fade bottom cascade> */}
                         <div className='footer-right-content'>
                             <div className='form-heading'>
                                 <h2> Inquire </h2>
@@ -121,7 +108,6 @@ const Footer = () => {
                                 </form>
                             </div>
                         </div>
-                    {/* </Fade> */}
                 </Col>
             </Row>
         </Container>

@@ -2,7 +2,6 @@ import { Container, Row, Col, Image, FormControl } from "react-bootstrap";
 import './Products.css';
 import { BsArrowDown } from 'react-icons/bs';
 import ProductsPage from "./ProductsPage";
-import { Fade } from "react-reveal";
 
 const Products = () => {
   return (
@@ -11,19 +10,14 @@ const Products = () => {
             <Row>
                 <Col className="col-lg-12" id="products-intro-content">
                     
-                    <Fade left>
                         <div className="products-intro-heading">
                             <h3>Why Choose Us?</h3>
                         </div>
-                    </Fade>
 
-                    <Fade left>
                         <div className="products-intro-tagline">
                             <h1>Creating Tailored Solutions for Your Business</h1>
                         </div>
-                    </Fade>
 
-                    <Fade left>
                         <div className="products-intro-descp">
                             <p>
                                 We're a specialized equipment and machine factory that delivers top-quality products with a flexible approach, timely delivery, and innovative concepts. 
@@ -31,35 +25,26 @@ const Products = () => {
                                 Let us help bring your vision to life.
                             </p>
                         </div>
-                    </Fade>
 
                     <div className="products-intro-imgs">
                         
-                        <Fade left>
                             <div className="products-intro-img">
                                 <img src="about_us.png" alt="" />
                             </div>
-                        </Fade>
 
-                        <Fade bottom>
                             <div className="products-intro-img">
                                 <img id="products-intro-img-mid" src="about_us.png" alt="" />
                             </div>
-                        </Fade>
 
-                        <Fade right>
                             <div className="products-intro-img">
                                 <img src="about_us.png" alt="" />
                             </div>
-                        </Fade>
                     </div>
 
-                    <Fade top>
                         <div className="products-intro-outro">
                             <h3>Our offerings</h3>
                             <BsArrowDown fontSize="40px" />
                         </div>
-                    </Fade>
 
                 </Col>
             </Row>
