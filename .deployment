@@ -1,2 +1,2 @@
 [config]
-command = npm run build --if-present
+command = cmd /c "npm install && npm run build"
