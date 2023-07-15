@@ -1,2 +1,2 @@
 [config]
-command = cmd /c "npm install && npm run build"
+command = cmd /c "npm install --force && npm run build"
