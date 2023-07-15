@@ -5,6 +5,29 @@ import NavMain from '../navbar/NavMain';
 import Footer from '../footer/Footer';
 import { Container, Row, Col } from 'react-bootstrap';
 import './ProductPageSingle.css';
+import { motion } from "framer-motion";
+
+const topAnimate = {
+    offScreen: {
+      y: -200,
+      opacity: 0
+    },
+    onScreen: {
+      y: 0,
+      opacity: 1
+    },
+}
+  
+const rightAnimate = {
+    offScreen: {
+      x: 200,
+      opacity: 0
+    },
+    onScreen: {
+      x: 0,
+      opacity: 1
+    },
+}
 
 const ProductPageSingle = () => {
     const { id } = useParams();
@@ -21,7 +44,16 @@ const ProductPageSingle = () => {
                     <Container fluid id='product-single-page'>
                         <Row id='product-single-page-content'>
                             <Col className="col-lg-6" id='product-single-page-left-content'>
-                                <div id={`product-single-page-heading-div${arr.length > 1 ? '-large' : ''}`}>
+                                <motion.div id={`product-single-page-heading-div${arr.length > 1 ? '-large' : ''}`}
+                                    initial={"offScreen"}
+                                    animate={"onScreen"}
+                                    transition={{
+                                      type: "spring",
+                                      delay: 0.3,
+                                      ease: [0.5, 0.71, 1, 1.5],
+                                    }}
+                                    variants={topAnimate}
+                                >
                                     {arr.length > 2 ?
                                         <>
                                             <h1>
@@ -39,17 +71,36 @@ const ProductPageSingle = () => {
                                         </>
                                     : <h1> {ele.heading} </h1>
                                     }
-                                </div>
+                                </motion.div>
 
                                 <div id='product-single-page-items'>
                                     {ele.items.map((item, index) => {
-                                        return <h3 key={index} id='product-single-page-item' > {item} </h3>
+                                        return <motion.h3 key={index} id='product-single-page-item' 
+                                            initial={"offScreen"}
+                                            animate={"onScreen"}
+                                            transition={{
+                                            type: "spring",
+                                            delay: 0.6 + index / 10,
+                                            ease: [0.5, 0.71, 1, 1.5],
+                                            }}
+                                            variants={topAnimate}
+                                        > {item} </motion.h3>
                                     })}
                                 </div>
                             </Col>
 
                             <Col className="col-lg-6" id='product-single-page-right-content'>
-                                <img src={ele.img} alt={ele.heading.toLowerCase()} id='product-single-page-img'/>   
+                                <motion.img src={ele.img} alt={ele.heading.toLowerCase()} id='product-single-page-img'
+                                    initial={"offScreen"}
+                                    animate={"onScreen"}
+                                    transition={{
+                                      type: "spring",
+                                      delay: 0.6,
+                                      ease: [0.5, 0.71, 1, 1.5],
+                                    }}
+                                    variants={rightAnimate}
+                                ></motion.img>
+                                
                             </Col>
                         </Row>
                     </Container>

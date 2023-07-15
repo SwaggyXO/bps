@@ -4,6 +4,7 @@ import { BsTelephone, BsWhatsapp } from 'react-icons/bs';
 import { TfiEmail } from 'react-icons/tfi';
 import { UserOutlined, MailOutlined, MobileOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
+import logo from '/logo_main.png';
 const { TextArea } = Input;
 
 const Footer = () => {
@@ -36,7 +37,7 @@ const Footer = () => {
 
                             <div className="footer-left-intro">
                                 <div className="footer-img">
-                                    <img src="logo_main.png" alt="" />
+                                    <img src={logo} alt="" />
                                 </div>
 
                                 <div className="footer-links">
