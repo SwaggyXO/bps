@@ -1,6 +1,7 @@
 import './Footer.css';
 import { Container, Row, Col, Image, FormControl } from "react-bootstrap";
-import { BsTelephone, BsYoutube } from 'react-icons/bs';
+import { BsTelephone, BsWhatsapp } from 'react-icons/bs';
+// import { IoLogoWhatsapp } from 'react-icons/io';
 import { TfiEmail } from 'react-icons/tfi';
 import { UserOutlined, MailOutlined, MobileOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
@@ -9,29 +10,32 @@ const { TextArea } = Input;
 import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        mobile: '',
-        message: '',
-    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const {name, email, mobile, message} = formData;
+        const from = e.target.elements.user_name.value;
+        const email = e.target.elements.user_email.value;
+        const phone = e.target.elements.user_phone.value;
+        const description = e.target.elements.user_descp.value;
 
-        const mailToLink = `mailto:pagchump96@gmail.com?subject=New Message From${name}&body=${encodeURIComponent(`${message}\n\n${mobile}`)}`;
+        const subject = 'BPS Contact Form Submission';
+        const body = `From: ${from}\nEmail: ${email}\nPhone: ${phone}\n\nDescription: ${description}\n`;
+
+        const mailToLink = `mailto:bpsenterprisesggn@gmail.com?subject=${encodeURIComponent(
+            subject
+        )}&body=${encodeURIComponent(body)}`;
+
         window.location.href = mailToLink;
     }
 
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        // const {name, value} = e.target;
 
-        setFormData((prevFormData) => ({
-            ...prevFormData,
-            [name]: value,
-        }))
+        // setFormData((prevFormData) => ({
+        //     ...prevFormData,
+        //     [name]: value,
+        // }))
     }
 
     return (
@@ -48,7 +52,7 @@ const Footer = () => {
 
                                 <div className="footer-links">
                                     <h5>Catch us at: </h5>
-                                    <a href=''> <BsYoutube /> </a>
+                                    <a href='https://wa.me/9810899268' target='_blank'> <BsWhatsapp /> </a>
                                 </div>
                             </div>
 
@@ -91,19 +95,19 @@ const Footer = () => {
                             <div className='footer-form'>
                                 <form onSubmit={handleSubmit}>
                                     <div className='form-input-div'>
-                                        <Input type='text' className='form-input' placeholder="Name" defaultValue={formData.name} onChange={handleChange} prefix={<UserOutlined />} />
+                                        <Input type='text' className='form-input' name='user_name'  placeholder="Name" onChange={handleChange} prefix={<UserOutlined />} />
                                     </div>
                                     <div className='form-input-div'>
-                                        <Input type='email' className='form-input' placeholder="Email Address" defaultValue={formData.email} onChange={handleChange} prefix={<TfiEmail />} />
+                                        <Input type='email' className='form-input' name='user_email' placeholder="Email Address" onChange={handleChange} prefix={<TfiEmail />} />
                                     </div>
                                     <div className='form-input-div'>
-                                        <Input type='tel' className='form-input' placeholder="Phone Number" defaultValue={formData.mobile} onChange={handleChange} prefix={<BsTelephone />} />
+                                        <Input type='tel' className='form-input' name='user_phone' placeholder="Phone Number" onChange={handleChange} prefix={<BsTelephone />} />
                                     </div>
                                     <div className='form-input-div'>
                                         <TextArea
                                             className='form-input'
+                                            name='user_descp'
                                             placeholder="Let us know how we can help"
-                                            defaultValue={formData.message}
                                             onChange={handleChange}
                                             autoSize={{
                                             minRows: 3,

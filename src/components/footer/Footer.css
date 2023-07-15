@@ -33,9 +33,14 @@
 
 .footer-left-content .footer-left-intro .footer-links a {
     margin: 0 1vh;
-    color: black;
-    font-size: 40px;
+    color: #25D366;
+    font-size: 30px;
 }
+
+/* .footer-left-content .footer-left-intro .footer-links a svg {
+    border: 2px solid white;
+    border-radius: 40px;
+} */
 
 .footer-left-content .hr-div{
     border: 5px solid #FCD980;
