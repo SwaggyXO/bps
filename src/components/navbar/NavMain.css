@@ -63,6 +63,14 @@
     margin-left: 1.5vh;
 }
 
+@media (max-width: 1920px)
+{
+    .logo-img{
+        height: 90px;
+        width: 160px;
+    }
+}
+
 @media (max-width: 1012px) {
     .nav-items {
         display: flex;
