@@ -66,8 +66,17 @@
 @media (max-width: 1920px)
 {
     .logo-img{
-        height: 90px;
-        width: 160px;
+        height: 80px;
+        width: 150px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 1490px)
+{
+    .logo-img{
+        height: 80px;
+        width: 150px;
     }
 }
 
