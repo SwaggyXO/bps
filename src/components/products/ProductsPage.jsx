@@ -48,6 +48,7 @@ const ProductsPage = ({headingA, imgA, headingB, imgB}) => {
                             }}
                             variants={leftAnimate}
                         >
+                            <p> Click to know more 👇 </p>
                             <h1> <Link to={`/products/${strA[0]}`} target="_top" style={{textDecoration: 'none', color: '#000000'}} className='toolTip'> {headingA} </Link> </h1>
                         </motion.div>
                 </Col>
@@ -102,6 +103,7 @@ const ProductsPage = ({headingA, imgA, headingB, imgB}) => {
                             variants={rightAnimate}
                         >
                             <h1> <Link to={`/products/${strB[0]}`} target="_top" style={{textDecoration: 'none', color: '#000000'}} className='toolTip'> {headingB} </Link> </h1>
+                            <p> Click to know more 👆 </p>
                         </motion.div>
 
                 </Col>
